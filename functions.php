@@ -27,7 +27,7 @@ function enqueue_styles()
     wp_enqueue_style('bootstrap-style');
     wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
     wp_enqueue_script('jquery');
-    wp_register_script('scriptjs', get_template_directory_uri() . '/assets/js/script.js');
+    wp_register_script('scriptjs', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
     wp_enqueue_script('scriptjs');
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
