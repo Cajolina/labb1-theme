@@ -1,27 +1,46 @@
-<?php
-get_header();
-?>
-
-
-
+<?php get_header() ?>
 <main>
     <section>
         <div class="container">
             <div class="row">
                 <div id="primary" class="col-xs-12 col-md-9">
-                    <h1>Blogg</h1>
-
-                    <?php
-                    if (have_posts()) {
-                        while (have_posts()) {
-                            the_post();
-
-                            get_template_part('/template-parts/content-archive');
-                        }
-                    } ?>
-
-
-
+                    <h1>Peter Pärmenäs</h1>
+                    <article>
+                        <img src="img/washington.jpg" />
+                        <h2 class="title">
+                            <a href="inlagg.html">Det tredje inlägget</a>
+                        </h2>
+                        <ul class="meta">
+                            <li>
+                                <i class="fa fa-calendar"></i> 1 januari, 2016
+                            </li>
+                            <li>
+                                <i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>
+                            </li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed sodales mauris. Aliquam felis est, efficitur vel fringilla quis, vehicula quis ex. Phasellus tristique nunc in leo faucibus, a consequat nulla sagittis. In sed mi mi. Praesent condimentum sollicitudin nibh. Vivamus vulputate purus quis volutpat fringilla. Ut tortor libero, semper eget dolor vel, hendrerit tempus dui. Suspendisse dictum efficitur blandit. In porta scelerisque nulla ac placerat.</p>
+                    </article>
+                    <article>
+                        <img src="img/london.jpg" />
+                        <h2 class="title">
+                            <a href="inlagg.html">Hej världen!</a>
+                        </h2>
+                        <ul class="meta">
+                            <li>
+                                <i class="fa fa-calendar"></i> 1 januari, 2016
+                            </li>
+                            <li>
+                                <i class="fa fa-user"></i> <a href="forfattare.html">Peter Pärmenäs</a>
+                            </li>
+                            <li>
+                                <i class="fa fa-tag"></i> <a href="kategori.html">Kategori 1</a>, <a href="kategori.html">Kategori 2</a>, <a href="kategori.html">Kategori 3</a>
+                            </li>
+                        </ul>
+                        <p>Sed pretium metus in urna vehicula imperdiet. Fusce at odio vitae felis maximus tincidunt. Nunc porttitor ex a elementum dictum. Maecenas eget arcu nulla. Cras auctor dui aliquet, condimentum orci vel, venenatis nisl. Ut semper magna urna, ac congue dui cursus vitae. Nam sed pharetra leo, vel tincidunt est. Phasellus volutpat tortor nec nulla feugiat congue. Donec quis ligula varius, euismod nisl eu, aliquet metus. Aliquam tempus iaculis odio, sed volutpat mi aliquam aliquet.</p>
+                    </article>
                     <nav class="navigation pagination">
                         <h2 class="screen-reader-text">Inläggsnavigering</h2>
                         <a class="prev page-numbers" href="">Föregående</a>
@@ -30,8 +49,6 @@ get_header();
                         <a class="next page-numbers" href="">Nästa</a>
                     </nav>
                 </div>
-
-
                 <aside id="secondary" class="col-xs-12 col-md-3">
                     <div id="sidebar">
                         <ul>
