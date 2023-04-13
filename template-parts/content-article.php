@@ -1,5 +1,5 @@
 <article>
-    <?php the_post_thumbnail('full'); ?>
+    <img src="<?php the_post_thumbnail_url('full'); ?>">
     <h2 class="title">
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h2>
