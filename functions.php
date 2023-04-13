@@ -2,8 +2,7 @@
 
 function themeSupport()
 {
-    //support menu
-    register_nav_menu('primary', 'Primary');
+
 
     //this add dynamic title tag support
     add_theme_support('title-tag');
@@ -14,6 +13,21 @@ function themeSupport()
     add_theme_support('widgets');
 }
 add_action('after_setup_theme', 'themeSupport');
+
+add_action('init', 'theme_support_menu');
+function theme_support_menu()
+{
+    //support menu
+    $locations = array(
+        'primary' => 'Primary',
+        'sidebar-menu' => 'Sidebar Menu'
+    );
+
+    register_nav_menus($locations);
+}
+
+
+
 //get_sidebar() får man tillgång till php filen sidebar.php
 register_sidebar([
     'name' => 'sidebarWidget',
