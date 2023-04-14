@@ -15,6 +15,7 @@ function themeSupport()
 add_action('after_setup_theme', 'themeSupport');
 
 add_action('init', 'theme_support_menu');
+
 function theme_support_menu()
 {
     //support menu
@@ -27,13 +28,34 @@ function theme_support_menu()
 }
 
 
+function widget_areas()
+{
+    //get_sidebar() får man tillgång till php filen sidebar.php    
+    register_sidebar([
+        'name' => 'sidebarWidget',
+        'description' => 'Widget for sidebars',
+        'id' => 'sidebarWidget'
 
-//get_sidebar() får man tillgång till php filen sidebar.php
-register_sidebar([
-    'name' => 'sidebarWidget',
-    'description' => 'Widget for sidebars',
-    'id' => 'sidebarWidget'
-]);
+    ]);
+    /////footer
+    register_sidebar([
+        'name' => 'footer1',
+        'description' => 'Widget for footer1',
+        'id' => 'footer1'
+    ]);
+    register_sidebar([
+        'name' => 'footer2',
+        'description' => 'Widget for footer2',
+        'id' => 'footer2'
+    ]);
+    register_sidebar([
+        'name' => 'footer3',
+        'description' => 'Widget for footer3',
+        'id' => 'footer3'
+    ]);
+}
+
+add_action('widgets_init', 'widget_areas');
 
 
 ///enqueue scripts
