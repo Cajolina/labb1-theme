@@ -41,17 +41,24 @@ function widget_areas()
     register_sidebar([
         'name' => 'footer1',
         'description' => 'Widget for footer1',
-        'id' => 'footer1'
+        'id' => 'footer1',
+        'before_widget' => '',
+        'after_widget' => ''
+
     ]);
     register_sidebar([
         'name' => 'footer2',
         'description' => 'Widget for footer2',
-        'id' => 'footer2'
+        'id' => 'footer2',
+        'before_widget' => '',
+        'after_widget' => ''
     ]);
     register_sidebar([
         'name' => 'footer3',
         'description' => 'Widget for footer3',
-        'id' => 'footer3'
+        'id' => 'footer3',
+        'before_widget' => '',
+        'after_widget' => ''
     ]);
 }
 
@@ -77,3 +84,19 @@ function enqueue_styles()
     wp_enqueue_script('scriptjs');
 }
 add_action('wp_enqueue_scripts', 'enqueue_styles');
+
+
+
+function ca_pagination_output($template, $class)
+{
+
+    $template = '
+	
+		<nav class=" navigation %1$s" role="navigation" aria-label="%4$s">
+			<h2 class="screen-reader-text">%2$s</h2>
+			%3$s
+		</nav>';
+
+    return $template;
+}
+add_filter('navigation_markup_template', 'ca_pagination_output', 99, 2);

@@ -9,6 +9,7 @@
                 <?php dynamic_sidebar('footer2') ?>
             </div>
             <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1">
+                <?php dynamic_sidebar('footer3') ?>
                 <h4>Social media</h4>
                 <ul class="social">
                     <li>
@@ -28,7 +29,7 @@
         </div>
         <div class="row bottom">
             <div class="col-xs-12">
-                <p>Copyright &copy; Grupp X, 2016</p>
+                <p>Copyright &copy; Grupp X, 2023</p>
             </div>
         </div>
     </div>
