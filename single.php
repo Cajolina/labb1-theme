@@ -1,6 +1,6 @@
-<? get_header(); ?>
-
-
+<?
+//Hämtar allt innehåll i header.php
+get_header(); ?>
 
 
 <main>
@@ -8,6 +8,7 @@
         <div class="container">
             <div class="row">
                 <div id="primary" class="col-xs-12 col-md-9">
+                    <!--Kollar om det finns poster och loopar ut posterna och hämtar innehåll från templateparts-->
                     <?php
                     if (have_posts()) {
                         while (have_posts()) {
@@ -18,6 +19,7 @@
                     } ?>
 
                 </div>
+                <!-- Hämtar innehåll från sidebar.php-->
                 <?php get_sidebar() ?>
             </div>
         </div>
@@ -25,4 +27,6 @@
 </main>
 
 
-<?php get_footer() ?>
+<?php
+//Hämtar allt innehåll i footer.php
+get_footer() ?>

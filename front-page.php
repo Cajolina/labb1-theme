@@ -1,4 +1,5 @@
 <?php
+//Hämtar allt innehåll i header.php
 get_header();
 ?>
 <main>
@@ -7,19 +8,13 @@ get_header();
             <div class="row">
                 <div class="col-xs-12">
                     <div class="hero">
-                        <?php the_post_thumbnail('full'); ?> 
+                        <!-- Hämtar utvald bild, inläggstitel och textinnehåll/content -->
+                        <?php
+
+                        the_post_thumbnail('full'); ?> 
                         <div class="text">
-
-                            <?php
-                            if (have_posts()) {
-                                while (have_posts()) {
-                                    the_post();
-                                    the_content();
-                                }
-                            }
-
-                            ?>
-
+                            <h1><?php the_title(); ?></h1>
+                            <p> <?php the_content() ?> </p>
 
                         </div>
                     </div>
@@ -28,4 +23,6 @@ get_header();
         </div>
     </section>
 </main>
-<?php get_footer(); ?>
+<?php
+//Hämtar allt innehåll i footer.php
+get_footer(); ?>

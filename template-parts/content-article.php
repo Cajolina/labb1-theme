@@ -1,3 +1,8 @@
+<!-- 
+Template-parts är en funktion som gör det möjligt att återanvända kod i flera olika mallar i webbplatsen. 
+Genererar en HTML-artikel med information om en post. Den inkluderar en bild som är kopplad till den utvalda bild-funktionen för inlägg ('the_post_thumbnail_url()'), en rubrik med länk till posten ('the_title()' och 'the_permalink()'), metadata om posten (datum, författare och kategori) och textinnehållet inlägget ('the_content()').
+
+ -->
 <article>
     <img src="<?php the_post_thumbnail_url('full'); ?>">
     <h2 class="title">
