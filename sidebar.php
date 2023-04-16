@@ -14,13 +14,18 @@
         </ul>
         <ul role="navigation">
             <li class="pagenav">
-                <?php
-                //En funktion som hämtar och visar en dynamisk sidebar för widgeten på bloggsidan. sidebarWidget är Idt för funktionen.
-                dynamic_sidebar('sidebarWidget') ?>
+                <!--En funktion som hämtar och visar en dynamisk sidebar för widgeten på bloggsidan. sidebarWidget är Idt för funktionen.-->
+                <?php dynamic_sidebar('sidebarWidgetArea1'); ?>
+            </li>
 
-
+            <li>
+                <?php dynamic_sidebar('sidebarWidgetArea2'); ?>
+            </li>
+            <li class="categories">
+                <?php dynamic_sidebar('sidebarWidgetArea3'); ?>
             </li>
         </ul>
+
 
     </div>
 </aside>

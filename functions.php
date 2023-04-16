@@ -39,10 +39,33 @@ function widget_areas()
     //Parametrar:"name": En titel för widget-området som kommer att visas i WordPress adminpanel
     //"description": En kort beskrivning av widget-området som kommer att visas i WordPress adminpanel.
     //"id": En unik identifierare för widget-området. Detta används i koden för att referera till widget-området.
+    //För sidor
     register_sidebar([
-        'name' => 'sidebarWidget',
+        'name' => 'sidebarWidgetArea1',
         'description' => 'Widget for sidebars',
-        'id' => 'sidebarWidget'
+        'id' => 'sidebarWidgetArea1',
+        'before_widget' => '',
+        'after_widget' => ''
+
+    ]);
+    //För Arkiv
+    register_sidebar([
+        'name' => 'sidebarWidgetArea2',
+        'description' => 'Widget for sidebars',
+        'id' => 'sidebarWidgetArea2',
+        'before_widget' => '',
+        'after_widget' => ''
+
+
+    ]);
+    //För Kategori
+    register_sidebar([
+        'name' => 'sidebarWidgetArea3',
+        'description' => 'Widget for sidebars',
+        'id' => 'sidebarWidgetArea3',
+        'before_widget' => '',
+        'after_widget' => ''
+
 
     ]);
 
@@ -53,6 +76,7 @@ function widget_areas()
         'id' => 'sidebarSearchWidget-1',
         'before_widget' => '',
         'after_widget' => ''
+
 
     ]);
 
